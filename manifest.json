@@ -1,0 +1,55 @@
+{
+
+  "description": "Communication between scripts example",
+  "manifest_version": 2,
+  "name": "ScriptCOM",
+  "version": "1.0",
+  "homepage_url": "https://www.example.org",
+
+
+  "permissions": [
+  "<all_urls>",
+    "activeTab",
+	"alarms",
+	"bookmarks",
+	"browserSettings",
+	"browsingData",
+	"contextMenus",
+	"contextualIdentities",
+	"cookies",
+	"downloads",
+	"downloads.open",
+	"find",
+	"geolocation",
+	"history",
+	"hosts",
+	"identity",
+	"idle",
+	"management",
+	"menus",
+	"nativeMessaging",
+	"notifications",
+	"pkcs11",
+	"privacy",
+	"proxy",
+	"sessions",
+	"storage",
+	"tabHide",
+	"tabs",
+	"theme",
+	"topSites",
+	"webNavigation",
+	"webRequest",
+	"webRequestBlocking"
+  ],
+
+"background": {
+    "scripts": ["background-script.js"]
+  },
+    "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
